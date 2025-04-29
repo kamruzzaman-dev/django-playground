@@ -16,22 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from node_js import views as node_js_view
-from react_js import views as react_js_view
-from fullstack_development import views as fullstack_development_view
-from backend_development import views as backend_development_view
-from frontend_development import views as frontend_development_view
+from node_js.views import node_js 
+from react_js.views import react_js
+from fullstack_development.views import fullstack_development
+from backend_development.views import backend_development
+from frontend_development.views import frontend_development
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('node/', node_js_view.home),
-    path('node/node-js', node_js_view.node_js),
-    path('react/', react_js_view.home),
-    path('react/react-js', react_js_view.react_js),
-    path('frontend-development/', frontend_development_view.home),
-    path('frontend-development/frontend-development', frontend_development_view.frontend_development),
-    path('backend-development/', backend_development_view.home),
-    path('backend-development/backend-development', backend_development_view.backend_development),
-    path('fullstack-development/', frontend_development_view.home),
-    path('fullstack-development/fullstack-development', fullstack_development_view.fullstack_development),
+    path('node/', node_js),
+    path('node/node-js', node_js),
+    path('react/', react_js),
+    path('react/react-js', react_js),
+    path('frontend-development/', frontend_development),
+    path('frontend-development/frontend-development', frontend_development),
+    path('backend-development/', backend_development),
+    path('backend-development/backend-development', backend_development),
+    path('fullstack-development/', frontend_development),
+    path('fullstack-development/fullstack-development', fullstack_development),
 ]
