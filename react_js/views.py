@@ -7,7 +7,7 @@ def react_js(request):
     seat= 25
     class_duration= '3 months'
     offering = {
-        # 'course': course,
+        'course': course,
         'total_class': total_class,
         'seat': seat,
         'class_duration': class_duration
