@@ -1,8 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 # Create your views here.
 def backend_development(request):
-    return HttpResponse("Hello from backend development!")
+    return render(request, "backend-development.html")
 
 def home(request):
-    return HttpResponse("Backend development homepage!")
+    return render(request, "home.html")

@@ -1,8 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 # Create your views here.
 def react_js(request):
-    return HttpResponse("Hello from React.js!")
+    return render(request, "react.html")
 
 def home(request):
-    return HttpResponse("React.js homepage!")
+    return render(request, "home.html")

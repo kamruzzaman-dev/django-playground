@@ -1,8 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 # Create your views here.
 def fullstack_development(request):
-    return HttpResponse("Hello from fullstack development!")
+    return render(request, "fullstack-development.html")
 
 def home(request):
-    return HttpResponse("Fullstack development homepage!")
+    return render(request, "home.html")

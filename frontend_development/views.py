@@ -1,8 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 # Create your views here.
 def frontend_development(request):
-    return HttpResponse("Hello from frontend development!")
+    return render(request, "frontend-development.html")
 
 def home(request):
-    return HttpResponse("Frontend development homepage!")
+    return render(request, "home.html")

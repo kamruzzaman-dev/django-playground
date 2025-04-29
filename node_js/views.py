@@ -1,8 +1,8 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 # Create your views here.
 def node_js(request):
-    return HttpResponse("Hello from Node.js!")
+    return render(request, "node.html")
 
 def home(request):
-    return HttpResponse("Node.js homepage!")
+    return render(request, "home.html")
