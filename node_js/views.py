@@ -2,7 +2,7 @@ from django.shortcuts import HttpResponse, render
 
 # Create your views here.
 def node_js(request):
-    return render(request, "node.html")
+    return render(request, "Node/node.html")
 
 def home(request):
-    return render(request, "home.html")
+    return render(request, "Common/home.html")
