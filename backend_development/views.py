@@ -5,4 +5,5 @@ def backend_development(request):
     return render(request, "BE/backend-development.html")
 
 def home(request):
-    return render(request, "Common/home.html")
+    name = {'which':"Backend Development"}
+    return render(request, "Common/home.html", context=name)

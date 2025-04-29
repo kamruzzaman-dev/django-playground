@@ -5,4 +5,5 @@ def react_js(request):
     return render(request, "React/react.html")
 
 def home(request):
-    return render(request, "Common/home.html")
+    name = {'which':"React"}
+    return render(request, "Common/home.html", context=name)

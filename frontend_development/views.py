@@ -5,4 +5,5 @@ def frontend_development(request):
     return render(request, "FE/frontend-development.html")
 
 def home(request):
-    return render(request, "Common/home.html")
+    name = {'which':"Frontend Development"}
+    return render(request, "Common/home.html", context=name)

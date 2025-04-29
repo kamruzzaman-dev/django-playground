@@ -5,4 +5,5 @@ def node_js(request):
     return render(request, "Node/node.html")
 
 def home(request):
-    return render(request, "Common/home.html")
+    name = {'which':"Node"}
+    return render(request, "Common/home.html", context=name)
