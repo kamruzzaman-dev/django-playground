@@ -16,9 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from node_js import views
+from node_js import views as node_js_view
+from react_js import views as react_js_view
+from fullstack_development import views as fullstack_development_view
+from backend_development import views as backend_development_view
+from frontend_development import views as frontend_development_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('node/', views.node_js),
+    path('node/', node_js_view.home),
+    path('node/node-js', node_js_view.node_js),
+    path('react/', react_js_view.home),
+    path('react/react-js', react_js_view.react_js),
+    path('frontend-development/', frontend_development_view.home),
+    path('frontend-development/frontend-development', frontend_development_view.frontend_development),
+    path('backend-development/', backend_development_view.home),
+    path('backend-development/backend-development', backend_development_view.backend_development),
+    path('fullstack-development/', frontend_development_view.home),
+    path('fullstack-development/fullstack-development', fullstack_development_view.fullstack_development),
 ]
