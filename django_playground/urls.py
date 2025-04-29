@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from node_js.views import node_js 
 from react_js.views import react_js
 from fullstack_development.views import fullstack_development
@@ -24,14 +24,9 @@ from frontend_development.views import frontend_development
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('node/', node_js),
-    path('node/node-js', node_js),
-    path('react/', react_js),
-    path('react/react-js', react_js),
-    path('frontend-development/', frontend_development),
-    path('frontend-development/frontend-development', frontend_development),
-    path('backend-development/', backend_development),
-    path('backend-development/backend-development', backend_development),
-    path('fullstack-development/', frontend_development),
-    path('fullstack-development/fullstack-development', fullstack_development),
+    path('node/', include("node_js.urls")),
+    path('react/', include('react_js.urls')),
+    path('frontend-development/', include("frontend_development.urls")),
+    path('backend-development/', include("backend_development.urls")),
+    path('fullstack-development/', include("fullstack_development.urls")),
 ]
