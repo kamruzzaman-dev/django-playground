@@ -10,8 +10,12 @@
   </head>
   <body>
     <div id="root">
-      <h1>React App</h1>
-      <p>Hello from React.js!.</p>
+      {% if course %}
+      <h2>{{course}}</h2>
+      {% endif %}
+      <h3>{{total_class}} Classes</h3>
+      <h3>{{seat}} Seats Available</h3>
+      <h3>Class Duration: {{class_duration}}</h3>
     </div>
 
     <script src="" async defer></script>
