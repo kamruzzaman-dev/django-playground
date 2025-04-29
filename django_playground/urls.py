@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from node_js import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('node/', views.node_js),
 ]
